@@ -1,6 +1,6 @@
 # Maze Runner
 
-**Maze Runner** is a simple, text-based maze game written in C++. Navigate through a series of mazes to reach the destination as quickly as possible to achieve the highest score.
+**Maze Runner** is a simple, cli-based maze game written in C++. Navigate through a series of mazes to reach the destination as quickly as possible to achieve the highest score.
 
 ---
 
