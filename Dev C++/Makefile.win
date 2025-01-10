@@ -1,0 +1,46 @@
+# Project: MazeRunner
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ../../../../../../../Windows/Temp/maze.o ../../../../../../../Windows/Temp/main.o ../../../../../../../Windows/Temp/levels.o ../../../../../../../Windows/Temp/io.o ../../../../../../../Windows/Temp/timer.o ../../../../../../../Windows/Temp/score.o ../../../../../../../Windows/Temp/ui.o
+LINKOBJ  = ../../../../../../../Windows/Temp/maze.o ../../../../../../../Windows/Temp/main.o ../../../../../../../Windows/Temp/levels.o ../../../../../../../Windows/Temp/io.o ../../../../../../../Windows/Temp/timer.o ../../../../../../../Windows/Temp/score.o ../../../../../../../Windows/Temp/ui.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ../../../../../../../Windows/Temp/MazeRunner.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+../../../../../../../Windows/Temp/maze.o: ../maze.cpp
+	$(CPP) -c ../maze.cpp -o ../../../../../../../Windows/Temp/maze.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/main.o: ../main.cpp
+	$(CPP) -c ../main.cpp -o ../../../../../../../Windows/Temp/main.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/levels.o: ../levels.cpp
+	$(CPP) -c ../levels.cpp -o ../../../../../../../Windows/Temp/levels.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/io.o: ../io.cpp
+	$(CPP) -c ../io.cpp -o ../../../../../../../Windows/Temp/io.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/timer.o: ../timer.cpp
+	$(CPP) -c ../timer.cpp -o ../../../../../../../Windows/Temp/timer.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/score.o: ../score.cpp
+	$(CPP) -c ../score.cpp -o ../../../../../../../Windows/Temp/score.o $(CXXFLAGS)
+
+../../../../../../../Windows/Temp/ui.o: ../ui.cpp
+	$(CPP) -c ../ui.cpp -o ../../../../../../../Windows/Temp/ui.o $(CXXFLAGS)
